@@ -1,0 +1,239 @@
+body {
+    text-align: center;
+    margin: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 700;
+    height: 100vh;
+    background: #F4F4F4;
+  }
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  article {
+    padding: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;  
+  }
+  header{
+    background: khaki;
+    background-size: cover;
+    padding: 1em;
+    margin-bottom: 20px;
+    height: 200px;
+  }
+  .content {
+    width: calc(1000vw -40);
+    background: white;
+    padding: 1em;
+    margin-bottom: 20px;
+    
+    -webkit-box-shadow: 4px 4px 30px -15px rgba(143,143,143,1);
+  -moz-box-shadow: 4px 4px 30px -15px rgba(143,143,143,1);
+  box-shadow: 4px 4px 30px -15px rgba(143,143,143,1);
+  }
+  header {
+    grid-area: header;
+  }
+  
+  nav  li {
+    padding: 0px 10px; 
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .article-content{
+    text-align: left;
+  }
+  .header li a {
+    display: block;
+    padding: 20px 0px;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    list-style-type: none;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    /*display: inline-block;*/
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    background: white;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  /* end of menu icon */
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  /* end of menu btn */
+  
+  .quick-info{
+    background: aliceblue;
+    padding: 2.2em;
+  }
+  
+  footer {
+    grid-area: footer;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 11px;
+    height: 5vh;
+    padding: 2vh;
+  }
+  
+  .blog{
+    height: 170px;
+    background: mistyrose;
+    background-size: cover;
+    width: auto;
+  }
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 500px) {
+    body {
+      background-color: #F09A9D; /* Red */
+    } 
+    nav  li {
+    display: flex;
+    padding: 0px 10px;
+    float: none;
+  }
+    
+    .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: red;
+  }
+    .header .menu-btn:checked ~ .menu {
+      max-height: 240px;
+      background: yellow;
+  }
+    
+  }
+  
+  @media screen and (max-width: 599px){
+  .header ul {
+      background-color: white;
+  }
+    .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: lightgray;
+  }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 600px) {
+    body {
+      background-color: #F5CF8E; /* Yellow */
+    }
+    
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    body {
+      background-color: #B2D6FF; /* Blue */
+    }
+   .container{
+      width: 90%;
+    }
+    .header ul{
+      list-style: none;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+   
+    .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: none;
+  }
+    
+  }
